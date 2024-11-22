@@ -1,33 +1,145 @@
 html {
   background-color: skyblue;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
   color: rgb(49, 41, 151);
+  text-align: center;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 20px;
+  background-image: url("image1.jpg");
+  background-size: no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 1rem 1rem 2rem #082424;
+  font-size: 15px;
+  border-radius: 0.5rem;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
+#title {
+  width: 400px;
+  height: 2em;
+} 
 
-li {
-  padding: 10px;
-  border-bottom: 1px solid #ccc;
+
+#taskForm {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-around;
+  background-size: cover;
+  background-position: center;
+  border-radius: 1rem;
+  box-shadow: 1rem 1rem 2rem #082424;
+  margin: 1rem;
+  height: 40px;
 }
 
-button {
-  margin-left: 10px;
+#status {
+  display: inline-flex;
+  position: relative;
+  font-size: 13px;
+  color: #1d1c1c;
+  line-height: 1;
+  width: 9.0em;
+  height: 2.5em;
 }
 
-input[type="text"] {
-  margin-bottom: 10px;
+#button_save {
+  background-color: #3634a4;
+  border-radius: 1em;
+  font-size: 1em;
+  box-shadow: 1rem 1rem 2rem #050808;
+  color: aliceblue;
+  height: 2em;
+}
+
+#button_change {
+  background-color: #eedf58;
+  border-radius: 1em;
+  font-size: 1em;
+  box-shadow: 1rem 1rem 2rem #050808;
+}
+
+#button_delete {
+  background-color: #f06d63;
+  border-radius: 1em;
+  font-size: 1em;
+  box-shadow: 1rem 1rem 2rem #050808;
+}
+
+#taskStats {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgb(96, 203, 194);
+  color: rgb(15, 15, 15);
+  padding: 0.1rem;
+  border-radius: 1rem;
+  margin: 1rem;
+  box-shadow: 1rem 1rem 2rem #082424;
+}
+
+#stats, #list {
+  display: flex;
+  flex-direction: column;
+}
+
+#button_deleteArray {
+  background-color: #f704c3;
+  border-radius: 1em;
+  font-size: 1em;
+  box-shadow: 1rem 1rem 2rem #050808;
+  color: rgb(178, 213, 243);
+  height: 2em;
+}
+
+#button_filter {
+  background-color: #5feb30;
+  border-radius: 1em;
+  font-size: 1em;
+  box-shadow: 1rem 1rem 2rem #050808;
+  color: rgb(27, 29, 31);
+}
+
+#taskList {
+  margin: 1rem;
+  background-color: rgb(85, 214, 214);
+  padding: 1rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  box-shadow: 1rem 1rem 2rem #082424;
+}
+
+#task {
+  background-color: rgb(251, 251, 235);
+  padding: 0.5rem;
+  border-radius: 1rem;
+  box-shadow: 0.1rem 0.1rem 0.2rem #808080a9;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgb(65, 59, 152);
+  text-align: right;
+  color: rgb(192, 195, 197);
+  padding: 0.1rem;
+  border-radius: 1rem;
+  margin: 1rem;
+  box-shadow: 1rem 1rem 2rem #082424;
+  height: 35px;
+}
+
+#filterBooks {
+  width: 400px;
+  height: 2em;
 }

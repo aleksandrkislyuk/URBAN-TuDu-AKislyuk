@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -10,14 +10,50 @@
 
 <body>
   <h1>Список задач</h1>
-  <input type="text" id="taskInput" placeholder="Добавьте новую задачу">
-  <button onclick="addTask()">Добавить задачу</button>
-  <input type="text" id="filterInput" placeholder="Фильтр задач" oninput="filterTasks()">
+  <form id="taskForm">
+    <label for="title">Новая задача:</label>
+    <input type="text" placeholder="Добавьте новую задачу" id="title" required>   
+    <label for="status">Статус:</label>
+    <select id="status">
+      <option value="Не выполнено">Не выполнено</option>
+      <option value="Выполнено">Выполнено</option>
+    </select>
+    <button id="button_save" type="submit" onclick="addTask()">Добавить/изменить</button>
+  </form>
+  <hr>
+  <div id="taskList">
+    <!-- Список задач -->
+  </div>
+  <hr>
+  <section id="taskStats">
+    <div>
+      <h2>Общая статистика:</h2>
+      <ul id="stats">
+        <li id="allList">Всего задач: <span id="totalCount"></span></li>
+        <li id="readList">Выполнено: <span id="read" name="Выполнено:"></span></li>
+        <li id="notReadList">Не выполнено: <span id="notRead" name="Не выполнено:"></span></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Список задач:</h2>
+      <ul>
+        <output id="list" name="Список задач"></output>
+      </ul>
+    </div>
+  </section>
 
-  <ul id="taskList">
+  </div>
+  <hr>
 
-  </ul>
   <script src="script.js"></script>
 </body>
+
+<footer>
+
+  <button id="button_deleteArray" onclick="deleteArray()">Удалить все задачи</button>
+
+  <input type="text" id="filterBooks" placeholder="фильтр" oninput="filterBooks()">
+
+</footer>
 
 </html>
