@@ -8,6 +8,10 @@ h1 {
   text-align: center;
 }
 
+h4 {
+  margin: 3px;
+}
+
 body {
   background-image: url("image1.jpg");
   background-size: no-repeat;
@@ -142,4 +146,60 @@ footer {
 #filterTasks {
   width: 400px;
   height: 2em;
+}
+
+#newTask {
+width: 400px;
+  height: 2em;
+}
+
+#newStatus {
+width: 130px;
+  height: 2.5em;
+}
+
+/* Стили для модального окна */
+#editModal {
+display: none; /* По умолчанию скрыто */
+position: fixed;
+z-index: 1000;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+width: 80%; /* Ширина модального окна */
+max-width: 600px;
+background-color: white;
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+padding: 30px;
+border-radius: 10px;
+}
+
+/* Фон за модальным окном */
+.modal-backdrop {
+display: none;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.6); /* Полупрозрачный черный фон */
+z-index: 999;
+}
+
+/* Кнопки закрытия и отправки */
+
+#save-button {
+cursor: pointer;
+padding: 6px 12px;
+font-size: 16px;
+color: white;
+background-color: #4fa2fb;
+border: none;
+border-radius: 5px;
+transition: all 0.3s ease-in-out;
+}
+
+
+#save-button:hover {
+background-color: #16518c;
 }

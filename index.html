@@ -12,13 +12,13 @@
   <h1>Список задач</h1>
   <form id="taskForm">
     <label for="title">Новая задача:</label>
-    <input type="text" placeholder="Добавьте новую задачу" id="title" required>   
+    <input type="text" placeholder="Добавьте новую задачу" id="title" required>
     <label for="status">Статус:</label>
     <select id="status">
       <option value="Не выполнено">Не выполнено</option>
       <option value="Выполнено">Выполнено</option>
     </select>
-    <button id="button_save" type="submit" onclick="addTask()">Добавить/изменить</button>
+    <button id="button_save" type="submit" onclick="addTask()">Добавить задачу</button>
   </form>
   <hr>
   <div id="taskList">
@@ -41,19 +41,32 @@
       </ul>
     </div>
   </section>
-
   </div>
   <hr>
+
+  <!-- Модальное окно для изменения задачи -->
+  <div id="editModal">
+    <h3>Редактирование задачи</h3>
+     
+    <form id="changeForm">
+      <input type="text" placeholder="Отредактируйте задачу" id="newTask" required>
+      <select id="newStatus">
+        <option value="Не выполнено">Не выполнено</option>
+        <option value="Выполнено">Выполнено</option>
+      </select>
+      <button id="save-button" type="submit" onclick="add_Task()">Сохранить</button>
+    </form>
+  </div>
+
+  <!-- Фоновая подложка для модального окна -->
+  <div id="modalBackdrop" class="modal-backdrop"></div>
 
   <script src="script.js"></script>
 </body>
 
 <footer>
-
-  <button id="button_deleteArray" onclick="deleteArray()">Удалить все задачи</button>
-
   <input type="text" id="filterTasks" placeholder="фильтр" oninput="filterTasks()">
-
+  <button id="button_deleteArray" onclick="deleteArray()">Удалить все задачи</button>
 </footer>
 
 </html>
